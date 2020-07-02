@@ -26,6 +26,12 @@ h1 {
   font-family: "Ubuntu";
 }
 
+h2 {
+  font-size: 2.4rem;
+  color: #444;
+  line-height: 0.8;
+}
+
 .center-input {
   display: flex;
   justify-content: space-evenly;
@@ -71,6 +77,10 @@ h1 {
   cursor: pointer;
 }
 
+.add-button:active {
+  background-color: rgb(33, 100, 62);
+}
+
 ul {
   margin-top: 3rem;
   list-style: none;
@@ -81,9 +91,23 @@ li {
   position: relative;
   right: 2rem;
   padding: 0.8rem 1rem 0.8rem 2rem;
-  border-radius: 0.5rem;
-  border-bottom: 0.2rem solid seagreen;
+  border-bottom: 0.1rem solid seagreen;
   margin-top: 1.5rem;
+}
+
+input[type="checkbox"] {
+  margin-right: 1rem;
+  margin-left: 0;
+  cursor: pointer;
+  width: 1.6rem;
+  height: 1.6rem;
+  position: relative;
+  top: 0.1rem;
+}
+
+.checked-task {
+  color: grey;
+  text-decoration: line-through grey;
 }
 
 .close-button {
@@ -105,4 +129,12 @@ li {
   background-color: #c24d3e;
   color: white;
   outline: none;
+}
+
+.close-button:active {
+  background-color: #88372c;
+}
+
+hr {
+  margin: 6rem 0;
 }

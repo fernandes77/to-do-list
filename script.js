@@ -1,35 +1,45 @@
 const taskInput = document.querySelector("#task-input");
 const addButton = document.querySelector(".add-button");
 const list = document.querySelector("ul");
-const taskError = document.querySelector("#task-input + span.error");
-
-let taskIndex = 1;
 
 function addTask() {
   if (taskInput.value === "") {
     return;
   }
 
+  taskInput.focus();
+
   let taskText = taskInput.value;
   taskInput.value = "";
 
   let task = document.createElement("li");
+  let check = document.createElement("input");
   let taskSpan = document.createElement("span");
   let removeButton = document.createElement("button");
 
+  task.appendChild(check);
   task.appendChild(taskSpan);
   task.appendChild(removeButton);
 
+  check.type = "checkbox";
   taskSpan.textContent = taskText;
   removeButton.textContent = "X";
   removeButton.className = "close-button";
 
   list.appendChild(task);
+
+  check.addEventListener("click", function() {
+    if (this.checked) {
+      taskSpan.className = "checked-task";
+    }
+    else {
+      taskSpan.className = "";
+    }
+  });
+
   removeButton.addEventListener("click", function () {
     task.remove();
   });
-
-  taskInput.focus();
 }
 
 addButton.addEventListener("click", addTask);
