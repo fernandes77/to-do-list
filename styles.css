@@ -26,13 +26,19 @@ h1 {
   font-family: "Ubuntu";
 }
 
+.center-input {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 #task-input {
-  margin: 2rem auto;
   padding: 0.8rem 2rem;
-  width: 64rem;
+  width: 48rem;
   font-size: 1.6rem;
-  border-radius: 0.5rem;
   border: 0.15rem solid seagreen;
+  border-radius: 0.5rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: ghostwhite;
 }
 
@@ -41,19 +47,39 @@ h1 {
 }
 
 .add-button {
-  height: 3rem;
-  margin-left: 0.5rem;
+  font-size: 1.6rem;
+  padding: 0.8rem 1rem;
+  background-color: white;
+  border: 0.15rem solid seagreen;
+  border-left: none;
+  border-radius: 0.5rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  color: seagreen;
+  position: relative;
+  right: 0.4rem;
+}
+
+.add-button:focus {
+  outline: none;
+}
+
+.add-button:hover {
+  background-color: seagreen;
+  color: white;
+  transition: all 0.2s;
+  cursor: pointer;
 }
 
 ul {
-  margin-top: 2rem;
+  margin-top: 3rem;
   list-style: none;
 }
 
 li {
   font-size: 1.6rem;
   position: relative;
-  right: 3rem;
+  right: 2rem;
   padding: 0.8rem 1rem 0.8rem 2rem;
   border-radius: 0.5rem;
   border-bottom: 0.2rem solid seagreen;
@@ -63,7 +89,20 @@ li {
 .close-button {
   border: none;
   background-color: white;
-  font-family: monospace;
   font-size: 2rem;
   float: right;
+  color: seagreen;
+}
+
+.close-button:hover {
+  background-color: #c24d3e;
+  color: white;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.close-button:focus {
+  background-color: #c24d3e;
+  color: white;
+  outline: none;
 }

@@ -1,8 +1,15 @@
-let taskInput = document.querySelector("#task-input");
-let addButton = document.querySelector(".add-button");
-let list = document.querySelector("ul");
+const taskInput = document.querySelector("#task-input");
+const addButton = document.querySelector(".add-button");
+const list = document.querySelector("ul");
+const taskError = document.querySelector("#task-input + span.error");
+
+let taskIndex = 1;
 
 function addTask() {
+  if (taskInput.value === "") {
+    return;
+  }
+
   let taskText = taskInput.value;
   taskInput.value = "";
 
@@ -27,7 +34,7 @@ function addTask() {
 
 addButton.addEventListener("click", addTask);
 
-taskInput.addEventListener("keyup", event => {
+taskInput.addEventListener("keyup", (event) => {
   if (event.key !== "Enter") return;
   addButton.click();
   event.preventDefault();
