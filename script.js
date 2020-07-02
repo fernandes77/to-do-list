@@ -2,6 +2,8 @@ const taskInput = document.querySelector("#task-input");
 const addButton = document.querySelector(".add-button");
 const list = document.querySelector("ul");
 
+taskInput.focus();
+
 function addTask() {
   if (taskInput.value === "") {
     return;
@@ -17,6 +19,7 @@ function addTask() {
   let taskSpan = document.createElement("span");
   let removeButton = document.createElement("button");
 
+  
   task.appendChild(check);
   task.appendChild(taskSpan);
   task.appendChild(removeButton);
