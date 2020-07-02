@@ -34,6 +34,7 @@ h1 {
 .center-input {
   display: flex;
   justify-content: space-evenly;
+  max-width: 90vw;
 }
 
 #task-input {
@@ -47,6 +48,7 @@ h1 {
   background-color: ghostwhite;
   position: relative;
   left: 0.2rem;
+  max-width: 60vw;
 }
 
 #task-input:focus {
