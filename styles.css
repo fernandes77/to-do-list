@@ -25,7 +25,7 @@ body {
 
 h1 {
   margin-top: 12vh;
-  font-size: 8rem;
+  font-size: calc(4.8rem + 2vw);
   text-align: center;
   color: seagreen;
   font-family: "Ubuntu";
@@ -40,7 +40,7 @@ h1 {
 #task-input {
   padding: 0.8rem 2rem;
   width: 48rem;
-  font-size: 1.6rem;
+  font-size: calc(1rem + 0.4vw);
   border: 0.15rem solid seagreen;
   border-radius: 0.5rem;
   border-top-right-radius: 0;
@@ -56,7 +56,7 @@ h1 {
 }
 
 .add-button {
-  font-size: 1.6rem;
+  font-size: calc(1rem + 0.4vw);
   padding: 0.8rem 1rem;
   background-color: white;
   border: 0.15rem solid seagreen;
