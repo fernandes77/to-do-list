@@ -16,15 +16,17 @@ function addTask() {
 
   let task = document.createElement("li");
   let check = document.createElement("input");
+  let checkSpan = document.createElement("span");
   let taskSpan = document.createElement("span");
   let removeButton = document.createElement("button");
 
-  
   task.appendChild(check);
+  task.appendChild(checkSpan);
   task.appendChild(taskSpan);
   task.appendChild(removeButton);
 
   check.type = "checkbox";
+  checkSpan.className = "checkmark";
   taskSpan.textContent = taskText;
   removeButton.textContent = "X";
   removeButton.className = "close-button";
